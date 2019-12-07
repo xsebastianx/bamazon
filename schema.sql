@@ -12,13 +12,13 @@ PRIMARY KEY (item_id)
 
 SELECT * FROM products;
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("NHL 19", "Games", 16, 30),
-	   ("Febreze", "Cleaning", 3, 69),
-       ("Nintendo Switch" "Games", 200, 40),
-       ("Candles", "Home Goods", 10, 25),
-       ("Backpacks", "Bags", 30, 40),
-       ("Socks", "Footwear", 5, 100),
-       ("Planet Earth", "Videos", 20, 1),
-       ("iPhone Cases", "Tech", 22, 77),
-       ("Bananas", "Food", 7, 99),
-       ("PS4", "Games", 300, 50)
+VALUES ("NHL 19", "Games", 15.99, 30),
+	   ("Febreze", "Cleaning", 3.99, 69),
+       ("Nintendo Switch", "Games", 199.99, 40),
+       ("Candles", "Home Goods", 10.99, 25),
+       ("Backpacks", "Bags", 29.99, 40),
+       ("Socks", "Footwear", 5.99, 100),
+       ("Planet Earth", "Videos", 19.99, 1),
+       ("iPhone Cases", "Tech", 22.99, 77),
+       ("Bananas", "Food", 7.99, 99),
+       ("PS4", "Games", 299.99, 50)
