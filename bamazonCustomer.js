@@ -1,8 +1,8 @@
-const mysql = require("msql");
-const inquirer = require("inquier");
-const table = require("cli-table");
+var mysql = require("mysql");
+var inquirer = require("inquirer");
+var table = require("cli-table");
 
-const connection = mysql.createConnection({
+var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
@@ -15,11 +15,11 @@ connection.connect(function(err){
     console.log("Connected as id" + connection.threadId);    
 });
 
-const displayProducts = function(){
+var displayProducts = function(){
     const query = "SELECT * FROM products";
     connection.query(query, function(err, res){
         if(err) throw err;
-        const displayTable = new Table ({
+        var displayTable = new Table ({
             head: ["Item ID", "Product", "Department", "Price", "Quantity"],
             colWidths: [10,25,25,10,14]
         });
@@ -58,7 +58,7 @@ function purchaseOrder(ID, amtNeeded){
     connection.query('SELECT * FROM products WHERE item_id = ' + ID, function(err,res){
         if(err){console.log(err)};
         if(amtNeeded <= res[0].stock_quantity){
-            const totalCost = res[0].price * amtNeeded;
+            var totalCost = res[0].price * amtNeeded;
             console.log("Order is in stock.");
             console.log("Total cost for " + amtNeeded + " " +res[0].product_name + " is " + totalCost);
 
