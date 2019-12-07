@@ -21,4 +21,9 @@ VALUES ("NHL 19", "Games", 15.99, 30),
        ("Planet Earth", "Videos", 19.99, 1),
        ("iPhone Cases", "Tech", 22.99, 77),
        ("Bananas", "Food", 7.99, 99),
-       ("PS4", "Games", 299.99, 50)
+       ("PS4", "Games", 299.99, 50);
+       
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+FLUSH PRIVILEGES;
+       
+
