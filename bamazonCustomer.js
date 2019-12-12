@@ -61,7 +61,7 @@ function displayProducts(){
                 const totalCost = res[0].price * amtNeeded;
                 console.log("Your order is in stock!");
                 console.log("Your total cost for " + amtNeeded + " " + res[0].product_name + "is " + totalCost);
-                connection.query("UPDATE products SET stock_quantity = stock_quantity - " + amtNeeded + "WHERE item_id = " + id);
+                connection.query('UPDATE products SET stock_quantity = stock_quantity - ' + amtNeeded + " WHERE item_id = " + id);
             } else{
                 console.log("Quantity not in stock");
             };
