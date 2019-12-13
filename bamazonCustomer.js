@@ -60,10 +60,10 @@ function displayProducts(){
             if(amtNeeded <= res[0].stock_quantity){
                 const totalCost = res[0].price * amtNeeded;
                 console.log("Your order is in stock!");
-                console.log("Your total cost for " + amtNeeded + " " + res[0].product_name + "is " + totalCost);
+                console.log("Your total cost for " + amtNeeded + " " + res[0].product_name + " is " + totalCost);
                 connection.query('UPDATE products SET stock_quantity = stock_quantity - ' + amtNeeded + " WHERE item_id = " + id);
             } else{
-                console.log("Quantity not in stock");
+                console.log("Quantity not in stock.  Please make another order");
             };
             displayProducts();
         });
